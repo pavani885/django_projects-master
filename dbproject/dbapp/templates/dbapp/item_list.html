@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item List</title>
+    <style>
+        .table{
+            border-radius: 5px;
+            border-color: black;
+            border-collapse: None;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Message</h1>
+    <table>
+        <th>Name&descripiton</th>
+        {% for item in items %}
+            <tr><td>{{ item.name }} : {{ item.description }}</td></tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'add_item' %}">Add Item into Table</a>
+</body>
+</html>
